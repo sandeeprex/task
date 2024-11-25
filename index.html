@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-pic">S</div>
+                <span class="user-name">Sandeep</span>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-item active">Today Focus</li>
+                    <li class="menu-item">Personal</li>
+                    <li class="menu-item">Freelance</li>
+                    <li class="menu-item">Work</li>
+                    <li class="menu-item">Add Filter</li>
+                    <li class="menu-item">Scheduled Tasks</li>
+                </ul>
+            </nav>
+            <div class="settings-section">
+                <li class="menu-item" id="settings-btn">Settings</li>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-top">
+                    <h1>Today's Main Focus</h1>
+                    <div class="current-time" id="current-time"></div>
+                </div>
+                <p>Design Team Meeting</p>
+                <div class="task-input-container">
+                    <input type="text" class="task-input" placeholder="What's on your task list?">
+                    <select class="category-selector">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="freelance">Freelance</option>
+                    </select>
+                    <button id="add-task">Add Task</button>
+                </div>
+            </div>
+            <div class="task-list">
+                <!-- Predefined Tasks -->
+                <div class="task">
+                    <span class="task-category personal"></span>
+                    <span class="task-text">Morning Meditation</span>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+                <div class="task">
+                    <span class="task-category work"></span>
+                    <span class="task-text">Complete Project Report</span>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+                <div class="task">
+                    <span class="task-category freelance"></span>
+                    <span class="task-text">Client Feedback Session</span>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal hidden">
+        <h3>Select Background Color</h3>
+        <div class="color-options">
+            <button class="color-btn" data-color="#f4f4f9">Default</button>
+            <button class="color-btn" data-color="#ffebee">Light Pink</button>
+            <button class="color-btn" data-color="#e8f5e9">Light Green</button>
+            <button class="color-btn" data-color="#e3f2fd">Light Blue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
